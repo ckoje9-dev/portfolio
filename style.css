@@ -27,6 +27,74 @@ section {
     font-size: 1.5rem;
 }
 
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.skill-card {
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.skill-name {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+}
+
+.skill-score {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.skill-progress {
+    height: 4px;
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.skill-progress .progress-bar {
+    opacity: 0.85;
+    height: 100%;
+}
+
+.skill-card.row-1 {
+    background: #e0f2fe;
+    border-color: #bae6fd;
+    color: #0f172a;
+}
+
+.skill-card.row-2 {
+    background: #ecfdf3;
+    border-color: #bbf7d0;
+    color: #14532d;
+}
+
+.skill-card.row-3 {
+    background: #f5f3ff;
+    border-color: #ddd6fe;
+    color: #312e81;
+}
+
+.skill-card.row-4 {
+    background: #fff7ed;
+    border-color: #fed7aa;
+    color: #7c2d12;
+}
+
+.skill-card.row-1 .progress-bar { background-color: #0f172a; }
+.skill-card.row-2 .progress-bar { background-color: #14532d; }
+.skill-card.row-3 .progress-bar { background-color: #312e81; }
+.skill-card.row-4 .progress-bar { background-color: #7c2d12; }
+
 .project-card {
     transition: transform 0.3s ease;
 }
@@ -58,5 +126,17 @@ section {
 @media (max-width: 991.98px) {
     .language-switch {
         margin-top: 1rem;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 767.98px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
