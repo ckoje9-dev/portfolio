@@ -2,12 +2,29 @@ section {
     padding: 60px 0;
 }
 
+.navbar.bg-dark {
+    background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%) !important;
+}
+
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: radial-gradient(circle at 20% 20%, #1e3a8a 0%, transparent 35%), 
+                radial-gradient(circle at 80% 10%, #0ea5e9 0%, transparent 30%), 
+                linear-gradient(135deg, #111827 0%, #0b1222 100%);
     color: white;
     min-height: 100vh;
     display: flex;
     align-items: center;
+}
+
+.hero .container {
+    position: relative;
+}
+
+.hero-links {
+    position: absolute;
+    left: 0;
+    bottom: 2rem;
+    font-size: 1.5rem;
 }
 
 .project-card {
@@ -16,6 +33,11 @@ section {
 
 .project-card:hover {
     transform: translateY(-10px);
+}
+
+.brand-logo {
+    height: 36px;
+    width: auto;
 }
 
 .brand-subtitle {
