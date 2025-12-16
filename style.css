@@ -18,6 +18,11 @@ section {
     transform: translateY(-10px);
 }
 
+.brand-subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
 .language-switch {
     gap: 0.5rem;
 }
