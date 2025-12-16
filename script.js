@@ -4,6 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const langButtons = document.querySelectorAll('[data-lang]');
     const i18nElements = document.querySelectorAll('[data-i18n]');
     const defaultLang = 'ko';
+    const projectButtons = document.querySelectorAll('.project-detail-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    const detailWrapper = document.getElementById('project-detail');
+    const detailTitle = document.getElementById('detail-title');
+    const detailDesc = document.getElementById('detail-desc');
+    const detailPoints = document.getElementById('detail-points');
 
     const baseTexts = {};
     i18nElements.forEach((el) => {
@@ -69,6 +75,40 @@ document.addEventListener('DOMContentLoaded', () => {
             if (lang && lang !== currentLang) {
                 applyLanguage(lang);
             }
+        });
+    });
+
+    const renderDetail = (btn) => {
+        if (!detailWrapper || !detailTitle || !detailDesc || !detailPoints) return;
+
+        const card = btn.closest('.project-card');
+        if (!card) return;
+
+        projectCards.forEach((c) => c.classList.remove('active'));
+        card.classList.add('active');
+
+        const title = btn.dataset.title || '';
+        const desc = btn.dataset.detail || '';
+        const points = btn.dataset.points ? btn.dataset.points.split('|') : [];
+
+        detailTitle.textContent = title;
+        detailDesc.textContent = desc;
+
+        detailPoints.innerHTML = '';
+        points.forEach((p) => {
+            const li = document.createElement('li');
+            li.textContent = p.trim();
+            detailPoints.appendChild(li);
+        });
+
+        detailWrapper.classList.remove('d-none');
+        detailWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    projectButtons.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            renderDetail(btn);
         });
     });
 

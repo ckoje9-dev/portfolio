@@ -130,6 +130,28 @@ section {
     transform: translateY(-10px);
 }
 
+.project-card.active {
+    border: 2px solid #38bdf8;
+    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.3);
+}
+
+.project-meta {
+    margin-top: 8px;
+    text-align: right;
+}
+
+.project-detail {
+    margin-top: 20px;
+}
+
+.project-detail ul {
+    padding-left: 1.2rem;
+}
+
+.project-detail li {
+    margin-bottom: 6px;
+}
+
 .brand-logo {
     height: 36px;
     width: auto;

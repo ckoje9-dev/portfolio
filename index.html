@@ -90,7 +90,7 @@
                         </span>
                     </div>
                     <div class="progress skill-progress">
-                        <div class="progress-bar row-1" style="width: 80%"></div>
+                        <div class="progress-bar row-1" style="width: 90%"></div>
                     </div>
                 </div>
                 <div class="skill-card row-1">
@@ -120,7 +120,7 @@
                         </span>
                     </div>
                     <div class="progress skill-progress">
-                        <div class="progress-bar row-1" style="width: 70%"></div>
+                        <div class="progress-bar row-1" style="width: 80%"></div>
                     </div>
                 </div>
 
@@ -278,23 +278,23 @@
                 <!-- 프로젝트 1 -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card project-card h-100 shadow">
-                        <img src="https://via.placeholder.com/400x300" 
+                        <img src="img/p1_thumbnail.jpg" 
                             class="card-img-top" alt="프로젝트 1">
                         <div class="card-body">
                             <h5 class="card-title" data-i18n="project1.title">LDM</h5>
                             <p class="card-text" data-i18n="project1.desc">
                                 DWG LLM화 모델
                             </p>
-                            <div class="d-flex gap-2">
-                                <span class="badge bg-primary">Python</span>
-                                <span class="badge bg-info">Git</span>
-                                <span class="badge bg-info">PostgreSQL</span>
-                                <span class="badge bg-info">LangChain</span>
-                                <span class="badge bg-warning">AutoCAD</span>
-                            </div>
+                            <div class="text-muted small project-meta">2025.12 - </div>
                         </div>
                         <div class="card-footer bg-transparent">
-                            <a href="#" class="btn btn-outline-primary btn-sm" data-i18n="project.cta">자세히 보기</a>
+                            <button
+                                class="btn btn-outline-primary btn-sm project-detail-btn"
+                                data-title="LDM"
+                                data-detail="도면(DWG) 데이터를 LLM이 이해할 수 있는 포맷으로 변환하고, 질의응답/검색을 지원하는 모델 파이프라인을 구축했습니다."
+                                data-points="DWG 파싱 및 정규화|LangChain 기반 질의 템플릿 구성|벡터DB 연동 검색 최적화">
+                                자세히 보기
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -302,24 +302,23 @@
                 <!-- 프로젝트 2 -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card project-card h-100 shadow">
-                        <img src="https://via.placeholder.com/400x300" 
+                        <img src="img/p2_thumbnail.jpg" 
                             class="card-img-top" alt="프로젝트 2">
                         <div class="card-body">
                             <h5 class="card-title" data-i18n="project2.title">은행 AI 온보딩 플랫폼</h5>
                             <p class="card-text" data-i18n="project2.desc">
                                 신입 은행원 대상 AI고객 상담 훈련 및 퀴즈 학습 플랫폼 개발
                             </p>
-                            <div class="d-flex gap-2">
-                                <span class="badge bg-primary">Python</span>
-                                <span class="badge bg-info">TypeScript</span>
-                                <span class="badge bg-info">Git</span>
-                                <span class="badge bg-info">PostgreSQL</span>
-                                <span class="badge bg-info">LangChain</span>
-                                <span class="badge bg-success">API</span>
-                            </div>
+                            <div class="text-muted small project-meta">2025.11 - 2025.12</div>
                         </div>
                         <div class="card-footer bg-transparent">
-                            <a href="#" class="btn btn-outline-primary btn-sm" data-i18n="project.cta">자세히 보기</a>
+                            <button
+                                class="btn btn-outline-primary btn-sm project-detail-btn"
+                                data-title="은행 AI 온보딩 플랫폼"
+                                data-detail="은행 상담 시나리오를 AI로 시뮬레이션하고, 퀴즈/리포트 기능으로 학습 진척도를 관리하는 웹 플랫폼입니다."
+                                data-points="대화형 시나리오 엔진 설계|퀴즈/채점 로직 및 리포트 자동화|API/DB 연동 및 모니터링">
+                                자세히 보기
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -327,21 +326,23 @@
                 <!-- 프로젝트 3 -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card project-card h-100 shadow">
-                        <img src="https://via.placeholder.com/400x300" 
+                        <img src="img/p3_thumbnail.jpg" 
                             class="card-img-top" alt="프로젝트 3">
                         <div class="card-body">
                             <h5 class="card-title" data-i18n="project3.title">ArchiDesign, MidasCAD</h5>
                             <p class="card-text" data-i18n="project3.desc">
                                 CAD 제품군 프로젝트 매니저
                             </p>
-                            <div class="d-flex gap-2">
-                                <span class="badge bg-primary">Jira</span>
-                                <span class="badge bg-secondary">Figma</span>
-                                <span class="badge bg-secondary">AutoCAD</span>
-                            </div>
+                            <div class="text-muted small project-meta">2022.04 - 2024.07</div>
                         </div>
                         <div class="card-footer bg-transparent">
-                            <a href="#" class="btn btn-outline-primary btn-sm" data-i18n="project.cta">자세히 보기</a>
+                            <button
+                                class="btn btn-outline-primary btn-sm project-detail-btn"
+                                data-title="ArchiDesign, MidasCAD"
+                                data-detail="CAD 제품군의 로드맵을 수립하고, 핵심 기능(모델링, 협업, 출력) 개선을 주도한 PM 경험입니다."
+                                data-points="요구사항 수집·우선순위화|UI/UX 개선을 위한 프로토타이핑|개발/QA/디자인 협업 리딩">
+                                자세히 보기
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -349,20 +350,23 @@
                 <!-- 프로젝트 4 -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card project-card h-100 shadow">
-                        <img src="https://via.placeholder.com/400x300" 
+                        <img src="img/p4_thumbnail.jpg" 
                             class="card-img-top" alt="프로젝트 4">
                         <div class="card-body">
                             <h5 class="card-title" data-i18n="project4.title">과천지식정보타운 광동제약 신사옥 건축설계</h5>
                             <p class="card-text" data-i18n="project4.desc">
                                 기본 및 실시설계
                             </p>
-                            <div class="d-flex gap-2">
-                                <span class="badge bg-primary">AutoCAD</span>
-                                <span class="badge bg-secondary">Revit</span>
-                            </div>
+                            <div class="text-muted small project-meta">2021.04 - 2022.02</div>
                         </div>
                         <div class="card-footer bg-transparent">
-                            <a href="#" class="btn btn-outline-primary btn-sm" data-i18n="project.cta">자세히 보기</a>
+                            <button
+                                class="btn btn-outline-primary btn-sm project-detail-btn"
+                                data-title="광동제약 신사옥"
+                                data-detail="과천지식정보타운 내 제약사 신사옥 기본·실시설계를 담당하며 구조/설비 팀과 협업해 BIM 모델을 고도화했습니다."
+                                data-points="BIM 협업 및 간섭 체크|설계 변경 관리 프로세스 구축|발주처 커뮤니케이션 및 보고">
+                                자세히 보기
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -370,43 +374,34 @@
                 <!-- 프로젝트 5 -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card project-card h-100 shadow">
-                        <img src="https://via.placeholder.com/400x300" 
-                            class="card-img-top" alt="프로젝트 4">
+                        <img src="img/p5_thumbnail.jpg" 
+                            class="card-img-top" alt="프로젝트 5">
                         <div class="card-body">
-                            <h5 class="card-title" data-i18n="project4.title">인천국제공항 4단계 부대건물 건축설계</h5>
-                            <p class="card-text" data-i18n="project4.desc">
+                            <h5 class="card-title" data-i18n="project5.title">인천국제공항 4단계 부대건물 건축설계</h5>
+                            <p class="card-text" data-i18n="project5.desc">
                                 기본 및 실시설계
                             </p>
-                            <div class="d-flex gap-2">
-                                <span class="badge bg-primary">AutoCAD</span>
-                                <span class="badge bg-secondary">Rhinoceros</span>
-                            </div>
+                            <div class="text-muted small project-meta">2018.05 - 2020.10</div>
                         </div>
                         <div class="card-footer bg-transparent">
-                            <a href="#" class="btn btn-outline-primary btn-sm" data-i18n="project.cta">자세히 보기</a>
+                            <button
+                                class="btn btn-outline-primary btn-sm project-detail-btn"
+                                data-title="인천공항 4단계 부대건물"
+                                data-detail="공항 부대시설의 기본 및 실시설계를 수행하며 환경·안전 기준을 반영한 도면 패키지를 완성했습니다."
+                                data-points="다학제 팀과 도면 통합|규제/코드 검토 및 반영|공정·리스크 관리">
+                                자세히 보기
+                            </button>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- 프로젝트 6 -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card project-card h-100 shadow">
-                        <img src="https://via.placeholder.com/400x300" 
-                            class="card-img-top" alt="프로젝트 4">
-                        <div class="card-body">
-                            <h5 class="card-title" data-i18n="project4.title">캄보디아 프놈펜 신공항 건축설계</h5>
-                            <p class="card-text" data-i18n="project4.desc">
-                                기본설계
-                            </p>
-                            <div class="d-flex gap-2">
-                                <span class="badge bg-primary">AutoCAD</span>
-                                <span class="badge bg-secondary">Photoshop</span>
-                                <span class="badge bg-secondary">Illustrator</span>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <a href="#" class="btn btn-outline-primary btn-sm" data-i18n="project.cta">자세히 보기</a>
-                        </div>
+            <div id="project-detail" class="project-detail d-none">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h4 class="mb-2" id="detail-title"></h4>
+                        <p class="mb-3" id="detail-desc"></p>
+                        <ul class="mb-0" id="detail-points"></ul>
                     </div>
                 </div>
             </div>
