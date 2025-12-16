@@ -3,6 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.navbar-collapse');
     const langButtons = document.querySelectorAll('[data-lang]');
     const i18nElements = document.querySelectorAll('[data-i18n]');
+    const defaultLang = 'ko';
+
+    const baseTexts = {};
+    i18nElements.forEach((el) => {
+        const key = el.dataset.i18n;
+        if (key) baseTexts[key] = el.textContent;
+    });
 
     navLinks.forEach((link) => {
         link.addEventListener('click', () => {
@@ -13,24 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const translations = {
-        ko: {
-            'nav.about': 'About',
-            'nav.skills': 'Skills',
-            'nav.projects': 'Projects',
-            'nav.contact': 'Contact',
-            'hero.title': '안녕하세요, 양승호입니다',
-            'hero.desc': '열정적인 AI 개발자를 꿈꾸는 건축가입니다.\n8년+ 경력(희림건축, 마이다스아이티) 있습니다.',
-            'hero.cta': '프로젝트 보기',
-            'skills.title': 'Skills',
-            'projects.title': 'My Projects',
-            'project1.title': '쇼핑몰 웹사이트',
-            'project1.desc': 'HTML, CSS, JavaScript를 활용한 반응형 쇼핑몰 프로젝트',
-            'project2.title': '날씨 앱',
-            'project2.desc': 'API 연동을 활용한 실시간 날씨 정보 제공 애플리케이션',
-            'project3.title': '할 일 관리 앱',
-            'project3.desc': '로컬 스토리지를 활용한 할 일 관리 애플리케이션',
-            'project.cta': '자세히 보기',
-        },
         en: {
             'nav.about': 'About',
             'nav.skills': 'Skills',
@@ -51,17 +40,19 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     };
 
-    let currentLang = 'ko';
+    let currentLang = defaultLang;
 
     const applyLanguage = (lang) => {
-        if (!translations[lang]) return;
-
         i18nElements.forEach((el) => {
             const key = el.dataset.i18n;
-            const text = translations[lang][key];
-            if (text) {
-                el.textContent = text;
-            }
+            if (!key) return;
+
+            const text =
+                lang === defaultLang
+                    ? baseTexts[key]
+                    : translations[lang]?.[key];
+
+            if (text) el.textContent = text;
         });
 
         document.documentElement.lang = lang;
@@ -81,5 +72,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    applyLanguage(currentLang);
+    // Keep default language text from HTML; only change on explicit selection.
 });
