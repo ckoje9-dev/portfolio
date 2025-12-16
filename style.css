@@ -74,6 +74,15 @@ section {
     opacity: 0.7;
 }
 
+.meta-grid {
+    margin-top: 12px;
+}
+
+.meta-date {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
 .skill-progress {
     height: 4px;
     background-color: rgba(0, 0, 0, 0.08);
