@@ -17,20 +17,24 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
+                        <a class="nav-link" href="#skills" data-i18n="nav.skills">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
+                        <a class="nav-link" href="#projects" data-i18n="nav.projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
                     </li>
                 </ul>
+                <div class="language-switch d-flex justify-content-center ms-lg-auto ms-0">
+                    <button class="btn btn-outline-light btn-sm active" data-lang="ko">KO</button>
+                    <button class="btn btn-outline-light btn-sm ms-2" data-lang="en">EN</button>
+                </div>
             </div>
         </div>
     </nav>
@@ -40,11 +44,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
-                    <h1 class="display-3 fw-bold mb-4">안녕하세요, 김개발입니다</h1>
-                    <p class="lead mb-4">
+                    <h1 class="display-3 fw-bold mb-4" data-i18n="hero.title">안녕하세요, 김개발입니다</h1>
+                    <p class="lead mb-4" data-i18n="hero.desc">
                         열정적인 웹 개발자를 꿈꾸는 정보통신공학과 학생입니다.
                     </p>
-                    <a href="#projects" class="btn btn-light btn-lg">프로젝트 보기</a>
+                    <a href="#projects" class="btn btn-light btn-lg" data-i18n="hero.cta">프로젝트 보기</a>
                 </div>
             </div>
         </div>
@@ -53,7 +57,7 @@
     <!-- 기술 스택 섹션 -->
     <section id="skills">
         <div class="container">
-            <h2 class="text-center mb-5">Skills</h2>
+            <h2 class="text-center mb-5" data-i18n="skills.title">Skills</h2>
             <div class="row g-4">
                 <div class="col-6 col-sm-4 col-md-3">
                     <div class="text-center p-3 border rounded">
@@ -95,7 +99,7 @@
     <!-- 프로젝트 섹션 -->
     <section id="projects" class="bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">My Projects</h2>
+            <h2 class="text-center mb-5" data-i18n="projects.title">My Projects</h2>
             <div class="row g-4">
                 <!-- 프로젝트 1 -->
                 <div class="col-12 col-md-6 col-lg-4">
@@ -103,8 +107,8 @@
                         <img src="https://via.placeholder.com/400x300" 
                             class="card-img-top" alt="프로젝트 1">
                         <div class="card-body">
-                            <h5 class="card-title">쇼핑몰 웹사이트</h5>
-                            <p class="card-text">
+                            <h5 class="card-title" data-i18n="project1.title">쇼핑몰 웹사이트</h5>
+                            <p class="card-text" data-i18n="project1.desc">
                                 HTML, CSS, JavaScript를 활용한 반응형 쇼핑몰 프로젝트
                             </p>
                             <div class="d-flex gap-2">
@@ -114,7 +118,7 @@
                             </div>
                         </div>
                         <div class="card-footer bg-transparent">
-                            <a href="#" class="btn btn-outline-primary btn-sm">자세히 보기</a>
+                            <a href="#" class="btn btn-outline-primary btn-sm" data-i18n="project.cta">자세히 보기</a>
                         </div>
                     </div>
                 </div>
@@ -125,8 +129,8 @@
                         <img src="https://via.placeholder.com/400x300" 
                             class="card-img-top" alt="프로젝트 2">
                         <div class="card-body">
-                            <h5 class="card-title">날씨 앱</h5>
-                            <p class="card-text">
+                            <h5 class="card-title" data-i18n="project2.title">날씨 앱</h5>
+                            <p class="card-text" data-i18n="project2.desc">
                                 API 연동을 활용한 실시간 날씨 정보 제공 애플리케이션
                             </p>
                             <div class="d-flex gap-2">
@@ -135,7 +139,7 @@
                             </div>
                         </div>
                         <div class="card-footer bg-transparent">
-                            <a href="#" class="btn btn-outline-primary btn-sm">자세히 보기</a>
+                            <a href="#" class="btn btn-outline-primary btn-sm" data-i18n="project.cta">자세히 보기</a>
                         </div>
                     </div>
                 </div>
@@ -146,8 +150,8 @@
                         <img src="https://via.placeholder.com/400x300" 
                             class="card-img-top" alt="프로젝트 3">
                         <div class="card-body">
-                            <h5 class="card-title">할 일 관리 앱</h5>
-                            <p class="card-text">
+                            <h5 class="card-title" data-i18n="project3.title">할 일 관리 앱</h5>
+                            <p class="card-text" data-i18n="project3.desc">
                                 로컬 스토리지를 활용한 할 일 관리 애플리케이션
                             </p>
                             <div class="d-flex gap-2">
@@ -156,7 +160,7 @@
                             </div>
                         </div>
                         <div class="card-footer bg-transparent">
-                            <a href="#" class="btn btn-outline-primary btn-sm">자세히 보기</a>
+                            <a href="#" class="btn btn-outline-primary btn-sm" data-i18n="project.cta">자세히 보기</a>
                         </div>
                     </div>
                 </div>
