@@ -140,6 +140,38 @@ section {
     text-align: right;
 }
 
+.project-detail-table {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.project-detail-table th,
+.project-detail-table td {
+    padding: 10px 12px;
+    vertical-align: middle;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.project-detail-table th {
+    width: 90px;
+    color: #0f172a;
+    background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.project-detail-table td {
+    color: #0f172a;
+    background: rgba(255, 255, 255, 0.92);
+    font-size: 0.95rem;
+}
+
+.project-detail-table tr:nth-child(even) td {
+    background: rgba(226, 232, 240, 0.8);
+}
+
 .project-detail {
     margin-top: 20px;
 }

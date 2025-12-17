@@ -7,9 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectButtons = document.querySelectorAll('.project-detail-btn');
     const projectCards = document.querySelectorAll('.project-card');
     const detailWrapper = document.getElementById('project-detail');
-    const detailTitle = document.getElementById('detail-title');
-    const detailDesc = document.getElementById('detail-desc');
-    const detailPoints = document.getElementById('detail-points');
+    const detailContainer = document.getElementById('detail-container');
 
     const baseTexts = {};
     i18nElements.forEach((el) => {
@@ -32,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'nav.projects': 'Projects',
             'nav.contact': 'Contact',
             'hero.title': "Hi, I'm Seung Ho Yang",
-            'hero.desc': 'Passionate AI developer and architect.\nBased in Seoul.\nFormerly at Heerim and Midas IT',
+            'hero.desc': 'Passionate AI developer and architect.\nBased in Seoul.\nFormerly at Heerim and Midas IT for 8+ years.',
             'hero.cta': 'View Projects',
             'skills.title': 'Skills',
             'projects.title': 'My Projects',
@@ -79,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const renderDetail = (btn) => {
-        if (!detailWrapper || !detailTitle || !detailDesc || !detailPoints) return;
+        if (!detailWrapper || !detailContainer) return;
 
         const card = btn.closest('.project-card');
         if (!card) return;
@@ -87,19 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
         projectCards.forEach((c) => c.classList.remove('active'));
         card.classList.add('active');
 
-        const title = btn.dataset.title || '';
-        const desc = btn.dataset.detail || '';
-        const points = btn.dataset.points ? btn.dataset.points.split('|') : [];
+        const content = card.querySelector('.project-detail-content');
+        if (!content) return;
 
-        detailTitle.textContent = title;
-        detailDesc.textContent = desc;
-
-        detailPoints.innerHTML = '';
-        points.forEach((p) => {
-            const li = document.createElement('li');
-            li.textContent = p.trim();
-            detailPoints.appendChild(li);
-        });
+        detailContainer.innerHTML = content.innerHTML;
 
         detailWrapper.classList.remove('d-none');
         detailWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
