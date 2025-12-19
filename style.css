@@ -215,6 +215,30 @@ section {
     margin: 1.5rem 0;
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 50%;
+    background-size: 60% 60%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #0f172a;
+    opacity: 0.4;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+}
+
 .project-detail {
     margin-top: 20px;
 }

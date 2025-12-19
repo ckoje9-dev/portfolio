@@ -92,6 +92,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
         detailWrapper.classList.remove('d-none');
         detailWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        const carousels = detailContainer.querySelectorAll('.carousel');
+        carousels.forEach((el, idx) => {
+            try {
+                const newId = `detail-carousel-${idx}`;
+                el.id = newId;
+
+                el.querySelectorAll('[data-bs-target]').forEach((btn) => {
+                    btn.setAttribute('data-bs-target', `#${newId}`);
+                });
+                el.querySelectorAll('[data-bs-slide-to]').forEach((btn, i) => {
+                    btn.setAttribute('data-bs-slide-to', i.toString());
+                });
+
+                const existing = bootstrap.Carousel.getInstance(el);
+                if (existing) existing.dispose();
+                new bootstrap.Carousel(el, { interval: false, ride: false });
+            } catch (err) {
+                // ignore if bootstrap not available
+            }
+        });
     };
 
     projectButtons.forEach((btn) => {
