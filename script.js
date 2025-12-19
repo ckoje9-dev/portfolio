@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectCards = document.querySelectorAll('.project-card');
     const detailWrapper = document.getElementById('project-detail');
     const detailContainer = document.getElementById('detail-container');
+    const scrollTopBtn = document.getElementById('scroll-top-btn');
+    const projectSection = document.getElementById('projects');
 
     const baseTexts = {};
     i18nElements.forEach((el) => {
@@ -113,6 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 // ignore if bootstrap not available
             }
         });
+
+        scrollTopBtn?.classList.remove('d-none');
     };
 
     projectButtons.forEach((btn) => {
@@ -133,6 +137,20 @@ document.addEventListener('DOMContentLoaded', () => {
         if (anchor) {
             e.preventDefault();
             anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+
+    scrollTopBtn?.addEventListener('click', () => {
+        projectSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    window.addEventListener('scroll', () => {
+        if (!scrollTopBtn || !projectSection) return;
+        const threshold = projectSection.offsetTop + 50;
+        if (window.scrollY >= threshold) {
+            scrollTopBtn.classList.remove('d-none');
+        } else {
+            scrollTopBtn.classList.add('d-none');
         }
     });
 

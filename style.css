@@ -230,6 +230,21 @@ section {
     width: 10%;
 }
 
+.floating-top-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1050;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #2563eb 0%, #38bdf8 100%);
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.3);
+    cursor: pointer;
+}
+
 .carousel-indicators [data-bs-target] {
     background-color: #0f172a;
     opacity: 0.4;
