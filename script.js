@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const detailContainer = document.getElementById('detail-container');
     const scrollTopBtn = document.getElementById('scroll-top-btn');
     const projectSection = document.getElementById('projects');
+    const langBlocks = document.querySelectorAll('[data-lang-block]');
 
     const baseTexts = {};
     i18nElements.forEach((el) => {
@@ -32,16 +33,20 @@ document.addEventListener('DOMContentLoaded', () => {
             'nav.projects': 'Projects',
             'nav.contact': 'Contact',
             'hero.title': "Hi, I'm Seung Ho Yang",
-            'hero.desc': 'Passionate AI developer and architect.\nBased in Seoul.\nFormerly at Heerim and Midas IT for 8+ years.',
+            'hero.desc': 'Passionate AI developer and architect.\nBased in Seoul.\n8+ years at Heerim and Midas IT.',
             'hero.cta': 'View Projects',
             'skills.title': 'Skills',
             'projects.title': 'My Projects',
-            'project1.title': 'Shopping Mall Website',
-            'project1.desc': 'Built a responsive shopping mall experience with HTML, CSS, and JavaScript.',
-            'project2.title': 'Weather App',
-            'project2.desc': 'Single-page app showing live weather data using public APIs.',
-            'project3.title': 'Todo Manager',
-            'project3.desc': 'Lightweight task manager that saves data via LocalStorage.',
+            'project1.title': 'LDM',
+            'project1.desc': 'DWG-to-LLM pipeline that converts drawings for Q&A and search.',
+            'project2.title': 'Bank AI Onboarding Platform',
+            'project2.desc': 'AI counseling simulation, quiz learning, and chatbot for new bankers.',
+            'project3.title': 'ArchiDesign / MidasCAD',
+            'project3.desc': 'PM for CAD product family roadmap and feature delivery.',
+            'project4.title': 'Kwangdong HQ Design (Gwacheon)',
+            'project4.desc': 'Schematic & detailed design for the new HQ in Gwacheon Tech Valley.',
+            'project5.title': 'Incheon Airport Phase 4 Aux Buildings',
+            'project5.desc': 'Design and execution drawings for T2 long-term parking, ICT center, and more.',
             'project.cta': 'View Details',
         },
     };
@@ -66,6 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.classList.toggle('active', btn.dataset.lang === lang);
         });
 
+        langBlocks.forEach((el) => {
+            const shouldShow = el.dataset.langBlock === lang;
+            el.classList.toggle('d-none', !shouldShow);
+        });
+
         currentLang = lang;
     };
 
@@ -88,9 +98,13 @@ document.addEventListener('DOMContentLoaded', () => {
         card.classList.add('active');
 
         const content = card.querySelector('.project-detail-content');
-        if (!content) return;
+        const contentByLang = Array.from(card.querySelectorAll('.project-detail-content')).find(
+            (c) => c.dataset.lang === currentLang
+        );
+        const finalContent = contentByLang || content;
+        if (!finalContent) return;
 
-        detailContainer.innerHTML = content.innerHTML;
+        detailContainer.innerHTML = finalContent.innerHTML;
 
         detailWrapper.classList.remove('d-none');
         detailWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
