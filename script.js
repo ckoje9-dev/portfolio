@@ -101,5 +101,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Anchor navigation inside project detail (smooth scroll)
+    detailContainer?.addEventListener('click', (e) => {
+        const target = e.target.closest('a[href^="#"]');
+        if (!target) return;
+        const href = target.getAttribute('href');
+        if (!href || href.length < 2) return;
+
+        const anchor = detailContainer.querySelector(href);
+        if (anchor) {
+            e.preventDefault();
+            anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+
     // Keep default language text from HTML; only change on explicit selection.
 });

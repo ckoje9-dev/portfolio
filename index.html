@@ -403,7 +403,9 @@
                             </button>
                         </div>
                         <div class="project-detail-content d-none">
+                            <div id="project3-top"></div>
                             <h4 class="mb-2">ArchiDesign, MidasCAD</h4>
+
                             <table class="table table-sm mb-3 project-detail-table">
                                 <tbody>
                                     <tr>
@@ -422,26 +424,120 @@
                                         <th scope="row">주요 성과</th>
                                         <td>
                                             <ul class="mb-0">
-                                                <li>CAD 엔진(ODA&ITC) 업데이트 기획</li>
-                                                <li>도면 자동화 기능 기획</li>
-                                                <li>정보태그 개선 기능 기획</li>
-                                                <li>버전 업데이트 및 배포 10+회(버전당 약 50개 issue 보고 및 검증), 핫픽스 대응</li>
-                                                <li>기술지원 월 300건 처리</li>
+                                                <li><a class="link-body-emphasis" href="#p3-sec1">ICAD Studio 기획(MDWG의 DWG화)</a></li>
+                                                <li><a class="link-body-emphasis" href="#p3-sec2">CAD 로드맵 수립</a></li>
+                                                <li><a class="link-body-emphasis" href="#p3-sec3">버전 업데이트 및 배포 10+회(버전당 약 60개 issue 보고 및 검증), 핫픽스 대응</a></li>
+                                                <li><a class="link-body-emphasis" href="#p3-sec4">기술지원 월 400건 및 오프라인 교육</a></li>
                                                 <li>기술지원 GPT 및 챗봇 자동화 기획</li>
-                                                <li>오프라인 교육을 통한 영업지원</li>
+                                                <li>CAD 엔진 마이그레이션(ODA&ITC)</li>
                                             </ul>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">LINK</th>
-                                        <td>https://www.midasuser.com/ko/product/cad<br>
-                                            https://cafe.naver.com/midasarchidesign
+                                        <td>제품사이트: https://www.midasuser.com/ko/product/cad<br>
+                                            기술지원사이트: https://support.midasuser.com/hc/ko<br>
+                                            사용자카페: https://cafe.naver.com/midasarchidesign
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <img src="src/p3_thumbnail.jpg" class="img-fluid rounded mb-3">
-                            <img src="src/p3_screen.jpg" class="img-fluid rounded mb-3">
+                            <h5 class="mb-2">0. MidasCAD 제품 소개</h5>
+                            <h6 class="mb-2">
+                                MidasCAD는 정보 기반 설계를 통해 반복 입력과 편집을 최소화해 설계·제도 업무 효율을 극대화한 신개념 CAD입니다.<br>
+                                MIDAS IT의 세계 최고 수준 건설 CAE 기술을 바탕으로 실무에 최적화된 4가지 핵심 기능을 제공합니다.
+                            </h6>
+                            <div class="feature-grid row row-cols-1 row-cols-sm-2 g-3 mb-3">
+                                <div class="col">
+                                    <div class="feature-card h-100">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-aspect-ratio feature-icon me-2"></i>
+                                            <h6 class="mb-0">자동 축척</h6>
+                                        </div>
+                                        <ul class="feature-list mb-0">
+                                            <li>뷰·시트 축척을 인식해 객체 크기/치수 자동 맞춤</li>
+                                            <li>별도 스케일 계산 없이 즉시 도면 작성</li>
+                                            <li>반복적인 스케일 편집을 최소화</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="feature-card h-100">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-tags-fill feature-icon me-2"></i>
+                                            <h6 class="mb-0">정보 태그</h6>
+                                        </div>
+                                        <ul class="feature-list mb-0">
+                                            <li>객체에 면적·길이·문자 등 메타데이터 태그 부여</li>
+                                            <li>정보 자동 추출로 물량·규격 검증 간소화</li>
+                                            <li>객체 수정 시 태그 연동으로 변경 작업 감소</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="feature-card h-100">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-kanban-fill feature-icon me-2"></i>
+                                            <h6 class="mb-0">프로젝트 관리</h6>
+                                        </div>
+                                        <ul class="feature-list mb-0">
+                                            <li>시트 단위 버전/이력/이슈를 통합 관리</li>
+                                            <li>탐색·목록·연속 출력 등 워크플로우 제공</li>
+                                            <li>템플릿 공유로 팀 협업 시 결과물 통일</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="feature-card h-100">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-diagram-3-fill feature-icon me-2"></i>
+                                            <h6 class="mb-0">영역 참조</h6>
+                                        </div>
+                                        <ul class="feature-list mb-0">
+                                            <li>내부 영역을 참조 뷰로 연결해 외부 참조 관리 최소화</li>
+                                            <li>참조 기반 파생도면을 신속히 작성/편집</li>
+                                            <li>필요 시 기존 외부 참조도 병행 지원</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mb-3">
+                                <img src="src/p3_screen.jpg" class="img-fluid rounded mb-2" alt="CAD 화면">
+                                <div class="text-muted small">CAD 화면</div>
+                            </div>
+                            <hr class="section-divider">
+                            <h5 class="mb-2" id="p3-sec1">1. ICAD Studio 기획(MDWG의 DWG화)</h5>
+                            <img src="src/p3_icadstudio1.jpg" class="img-fluid rounded mb-3">
+                            <img src="src/p3_icadstudio2.jpg" class="img-fluid rounded mb-3">
+                            <img src="src/p3_icadstudio3.jpg" class="img-fluid rounded mb-3">
+                            <img src="src/p3_icadstudio4.jpg" class="img-fluid rounded mb-3">
+                            <img src="src/p3_icadstudio5.jpg" class="img-fluid rounded mb-3">
+                            <img src="src/p3_icadstudio6.jpg" class="img-fluid rounded mb-3">
+                            <img src="src/p3_icadstudio7.jpg" class="img-fluid rounded mb-3">
+                            <img src="src/p3_icadstudio8.jpg" class="img-fluid rounded mb-3">
+                            <img src="src/p3_icadstudio9.jpg" class="img-fluid rounded mb-3">
+                            <img src="src/p3_icadstudio10.jpg" class="img-fluid rounded mb-3">
+                            <img src="src/p3_icadstudio11.jpg" class="img-fluid rounded mb-3">
+                            <div class="mb-4"><a class="back-to-top small link-primary" href="#project3-top">↑ 상단으로</a></div>
+
+                            <hr class="section-divider">
+                            <h5 class="mb-2" id="p3-sec2">2. CAD 로드맵 수립</h5>
+                            <img src="src/p3_roadmap2.jpg" class="img-fluid rounded mb-3">
+                            <img src="src/p3_roadmap3.jpg" class="img-fluid rounded mb-3">
+                            <img src="src/p3_roadmap4.jpg" class="img-fluid rounded mb-3">
+                            <img src="src/p3_roadmap5.jpg" class="img-fluid rounded mb-3">
+                            <div class="mb-4"><a class="back-to-top small link-primary" href="#project3-top">↑ 상단으로</a></div>
+                            
+                            <hr class="section-divider">
+                            <h5 class="mb-2" id="p3-sec3">3. 버전 업데이트 및 배포 10+회</h5>
+                            <img src="src/p3_roadmap1.jpg" class="img-fluid rounded mb-3">
+                            <div class="mb-4"><a class="back-to-top small link-primary" href="#project3-top">↑ 상단으로</a></div>
+
+                            <hr class="section-divider">
+                            <h5 class="mb-2" id="p3-sec4">4. 기술지원 및 교육</h5>
+                            <img src="src/p3_techsupport.jpg" class="img-fluid rounded mb-3">
+                            <img src="src/p3_lessons.jpg" class="img-fluid rounded mb-3">
+                            <div class="mb-4"><a class="back-to-top small link-primary" href="#project3-top">↑ 상단으로</a></div>
                             
                         </div>
                     </div>
@@ -562,4 +658,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-

@@ -172,6 +172,49 @@ section {
     background: rgba(226, 232, 240, 0.8);
 }
 
+.feature-grid .feature-card {
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 12px;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.feature-icon {
+    font-size: 1.2rem;
+    color: #2563eb;
+}
+
+.feature-grid h6 {
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.feature-grid p {
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+.feature-list {
+    padding-left: 1.1rem;
+}
+
+.feature-list li {
+    color: #475569;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.back-to-top {
+    text-decoration: none;
+}
+
+.section-divider {
+    border: 0;
+    border-top: 1px dashed rgba(15, 23, 42, 0.2);
+    margin: 1.5rem 0;
+}
+
 .project-detail {
     margin-top: 20px;
 }
