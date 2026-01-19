@@ -314,9 +314,9 @@
                         <img src="src/p1_thumbnail.jpg" 
                             class="card-img-top" alt="프로젝트 1">
                         <div class="card-body">
-                            <h5 class="card-title" data-i18n="project1.title">LDM</h5>
+                            <h5 class="card-title" data-i18n="project1.title">도면 변환, AI 분석, 생성 플랫폼</h5>
                             <p class="card-text" data-i18n="project1.desc">
-                                DWG LLM화 모델
+                                CAD 도면을 텍스트 기반으로 분석하여 AI의 도면 TASK 정확도 개선
                             </p>
                             <div class="text-muted small project-meta">2025.12 - </div>
                         </div>
@@ -326,36 +326,158 @@
                             </button>
                         </div>
                         <div class="project-detail-content d-none" data-lang="ko">
-                            <h4 class="mb-2">LDM</h4>
-                            <p class="mb-3">
-                                도면(DWG) 데이터를 LLM이 이해할 수 있는 포맷으로 변환하고, 질의응답/검색을 지원하는 모델 파이프라인을 구축했습니다.
-                            </p>
+                            <h4 class="mb-2">LAIKA</h4>
                             <table class="table table-sm mb-3 project-detail-table">
                                 <tbody>
                                     <tr>
                                         <th scope="row">요약</th>
-                                        <td>CAD 제품군 기술기획, 지원, 교육, 검증, 배포 등</td>
+                                        <td>DWG-DXF 변환 및 AI 도면 분석, 생성 플랫폼</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">기간</th>
-                                        <td>20xx. xx - 20xx. xx</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">역할</th>
-                                        <td>PM</td>
+                                        <th scope="row">인원</th>
+                                        <td>1명</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">소속</th>
-                                        <td>Midas IT</td>
+                                        <td>개인</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">LINK</th>
+                                        <td>
+                                            <a href="https://github.com/ckoje9-dev/laika" target="_blank" rel="noopener noreferrer">https://github.com/ckoje9-dev/laika</a>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <img src="src/p1_thumbnail.jpg" class="img-fluid rounded mb-3" alt="LDM 상세 이미지">
-                            <ul class="mb-0">
-                                <li>DWG 파싱 및 정규화</li>
-                                <li>LangChain 기반 질의 템플릿 구성</li>
-                                <li>벡터DB 연동 검색 최적화</li>
-                            </ul>
+                            <h5 class="mb-2">LAIKA 플랫폼 소개</h5>
+                            <h6 class="mb-2">
+                                본 플랫폼은 도면 변환, AI 분석 및 생성하는 서비스입니다.<br>
+                                DWG를 텍스트 기반의 DXF로 변환하여 정확한 객체 좌표값 등을 파싱하여 DB를 구성하고, AI가 이를 기반으로 도면을 분석 및 생성합니다.
+                            </h6>
+                            <div class="feature-grid row row-cols-1 row-cols-lg-3 g-3 mb-3">
+                                <div class="col">
+                                    <div class="feature-card h-100">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-people-fill feature-icon me-2"></i>
+                                            <h6 class="mb-0">STEP1. DWG-DXF 도면 변환</h6>
+                                        </div>
+                                        <ul class="feature-list mb-0">
+                                            <li>다중 파일 업로드</li>
+                                            <li>일괄 변환 및 다운로드</li>
+                                            <li>ODA Converter 활용</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="feature-card h-100">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-journal-text feature-icon me-2"></i>
+                                            <h6 class="mb-0">STEP2. AI 도면 분석</h6>
+                                        </div>
+                                        <ul class="feature-list mb-0">
+                                            <li>다중 DXF 파일 업로드</li>
+                                            <li>dxf-parser로 1차 파싱</li>
+                                            <li>전체 레이어, 블록, 엔티티 조회</li>
+                                            <li>템플릿에 맞춘 설정에 따라 2차 분석</li>
+                                            <li>도곽, 축선, 구조, 비구조 요소 등 조회</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="feature-card h-100">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-chat-dots-fill feature-icon me-2"></i>
+                                            <h6 class="mb-0">STEP3. AI 도면 생성 (진행중)</h6>
+                                        </div>
+                                        <ul class="feature-list mb-0">
+                                            <li>프롬프트 + 템플릿 설정에 따라 AI로 DXF 도면 생성</li>
+                                            <li>DXF를 DWG로 변환하여 유저에게 제공</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="p1-carousel" class="carousel slide mb-3" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#p1-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#p1-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#p1-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#p1-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                    <button type="button" data-bs-target="#p1-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                    <button type="button" data-bs-target="#p1-carousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                    <button type="button" data-bs-target="#p1-carousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                                    <button type="button" data-bs-target="#p1-carousel" data-bs-slide-to="6" aria-label="Slide 8"></button>
+                                    <button type="button" data-bs-target="#p1-carousel" data-bs-slide-to="6" aria-label="Slide 9"></button>
+                                    <button type="button" data-bs-target="#p1-carousel" data-bs-slide-to="6" aria-label="Slide 10"></button>
+                                    <button type="button" data-bs-target="#p1-carousel" data-bs-slide-to="6" aria-label="Slide 11"></button>
+                                    <button type="button" data-bs-target="#p1-carousel" data-bs-slide-to="6" aria-label="Slide 12"></button>
+                                    <button type="button" data-bs-target="#p1-carousel" data-bs-slide-to="6" aria-label="Slide 13"></button>
+                                    <button type="button" data-bs-target="#p1-carousel" data-bs-slide-to="6" aria-label="Slide 14"></button>
+                                    <button type="button" data-bs-target="#p1-carousel" data-bs-slide-to="6" aria-label="Slide 15"></button>
+                                    <button type="button" data-bs-target="#p1-carousel" data-bs-slide-to="6" aria-label="Slide 16"></button>
+                                    <button type="button" data-bs-target="#p1-carousel" data-bs-slide-to="6" aria-label="Slide 17"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="src/p1_title.jpg" class="d-block w-100 rounded" alt="타이틀">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="src/p1_contents.jpg" class="d-block w-100 rounded" alt="목차">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="src/p1_intro1.jpg" class="d-block w-100 rounded" alt="intro1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="src/p1_intro2.jpg" class="d-block w-100 rounded" alt="intro2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="src/p1_intro3.jpg" class="d-block w-100 rounded" alt="intro3">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="src/p1_intro4.jpg" class="d-block w-100 rounded" alt="intro4">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="src/p1_architecture1.jpg" class="d-block w-100 rounded" alt="아키텍처1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="src/p1_architecture2.jpg" class="d-block w-100 rounded" alt="아키텍처2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="src/p1_architecture3.jpg" class="d-block w-100 rounded" alt="아키텍처3">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="src/p1_UI1.jpg" class="d-block w-100 rounded" alt="UI1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="src/p1_UI2.jpg" class="d-block w-100 rounded" alt="UI2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="src/p1_UI3.jpg" class="d-block w-100 rounded" alt="UI3">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="src/p1_UI4.jpg" class="d-block w-100 rounded" alt="UI4">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="src/p1_UI5.jpg" class="d-block w-100 rounded" alt="UI5">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="src/p1_UI6.jpg" class="d-block w-100 rounded" alt="UI6">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="src/p1_UI7.jpg" class="d-block w-100 rounded" alt="UI7">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="src/p1_todo.jpg" class="d-block w-100 rounded" alt="todo">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#p1-carousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#p1-carousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
