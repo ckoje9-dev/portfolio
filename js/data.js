@@ -316,6 +316,6 @@ export const projects = [
 export const about = {
   id: 'about',
   title: 'About',
-  subtitle: '건축과 소프트웨어 사이에서 일합니다',
+  subtitle: '기획부터 배포까지, AI와 함께',
   visual: { text: 'Y' },
 };
