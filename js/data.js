@@ -130,10 +130,6 @@ export const projects = [
           ['src/p8_remote.jpg', '원격 경영'],
         ],
       },
-      {
-        title: '기술개발 수행일정',
-        images: [['src/p8_schedule.jpg', '5개년 기술개발 수행일정']],
-      },
     ],
   },
   {
